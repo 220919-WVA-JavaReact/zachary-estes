@@ -19,7 +19,7 @@ if [[ $ans = "-a" ]] #displays parsed data
     then
     read -p "What is your first name: " fname;
     sh parser.sh MOCK_DATA.csv | grep -A5 "First name: $fname$"
-	exit 0;
+	#exit 0;
 elif [[ $ans = "-b" ]] #adding data to MOCK_DATA.csv
     then
     read -p "enter first name: " fn;
