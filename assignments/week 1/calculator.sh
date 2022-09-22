@@ -5,18 +5,18 @@ c=$3;
 
 #using regex to check variables for actual numbers/work in progress
 
-#t1='^[0-9]*$'
-#if [ -z $a ] || [ -z $b ] || [ -z $c ]
-#then
-#	echo "please add an equation"
-#	exit
-#fi
+t1='^[0-9]+$'
+if [ -z $a ] || [ -z $b ] || [ -z $c ]
+then
+	echo "please add an equation"
+	exit
+fi
 
-#if ! [ $a !=~ ^[0-9]+$ ] || ! [ $c !=~ ^[0-9]+$ ]
-#then 
-#	echo "please use a number" >&2; 
-#	exit 
-#fi
+if ! [[ $a =~ $t1 ]] || ! [[ $c =~ $t1 ]] ;
+then
+	echo "ERROR! Use a number please!!" >&2;
+	exit 1
+fi
 
 #using if/elif to check operations and using arithmetic/echoing answers
 
