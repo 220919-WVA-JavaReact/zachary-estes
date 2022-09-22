@@ -15,12 +15,13 @@ hello
 
 #error checker to make sure it recieves a correct command
 
+#checking for type of response 
 if [[ $ans = "-a" ]] #displays parsed data
     then
     read -p "What is your first name: " fname;
     sh parser.sh MOCK_DATA.csv | grep -A5 "First name: $fname$"
 	#exit 0;
-elif [[ $ans = "-b" ]] #adding data to MOCK_DATA.csv
+elif [[ $ans = "-b" ]] #user prompts to add data
     then
     read -p "enter first name: " fn;
 	
@@ -32,7 +33,7 @@ elif [[ $ans = "-b" ]] #adding data to MOCK_DATA.csv
 	
 	read -p "enter password: " pw;
 	
-    echo "$fn,$la,$em,$us,$pw" >> MOCK_DATA.csv;
+    echo "$fn,$la,$em,$us,$pw" >> MOCK_DATA.csv; #adding data to csv file
     
 	echo "info added!"
 
