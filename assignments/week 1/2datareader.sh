@@ -38,7 +38,7 @@ elif [[ $ans = "-b" ]] #user prompts to add data
     echo "$fn,$la,$em,$us,$pw" >> MOCK_DATA.csv; #adding data to csv file
     
 	echo "info added!"
-elif [[ $ans = "-c" ]]
+elif [[ $ans = "-c" ]] #exit script command
 then 
     echo "Goodbye!"
     exit 0;
