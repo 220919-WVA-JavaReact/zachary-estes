@@ -44,6 +44,6 @@ then
     exit 0;
 else
     echo "please enter one of the prompted responses"
-    hello;
+    exit 0;
 fi 
 
