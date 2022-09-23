@@ -6,7 +6,7 @@ function hello()
   echo " -a show current directory "
   echo " -b show current user "
   echo " -c Show today's date "
-  echo " -c Check if other users are logged in  "
+  echo " -d Check if other users are logged in  "
   read ans
 }
 
@@ -17,5 +17,11 @@ if [[ $ans = "-a" ]] #
     pwd
 elif [[ $ans = "-b" ]]
     then
-    echo "$USER";
+    whoami
+elif [[ $ans = "-c" ]]
+    then
+    date +'%m/%d/%Y'
+elif [[ $ans = "-d" ]]
+    then
+    
 fi
