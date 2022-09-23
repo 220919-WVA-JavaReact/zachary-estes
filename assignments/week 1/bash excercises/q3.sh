@@ -1,12 +1,12 @@
 #!/bin/bash
 
-a=$1
+a=$1 # taking user input
 
-x=1
+x=1 #min value
 
 for (( i=$a; i>0; i-- ))
 do 
-    x=$[$i * $x] 
+    x=$[$i * $x] #loop calculation for getting factorial
 done; 
 
-echo $x;
+echo $x; #print answer
