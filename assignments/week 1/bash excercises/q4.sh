@@ -1,0 +1,21 @@
+#!/bin/bash
+
+function hello()
+{
+  echo "Hello! Please choose one of the following"
+  echo " -a show current directory "
+  echo " -b show current user "
+  echo " -c Show today's date "
+  echo " -c Check if other users are logged in  "
+  read ans
+}
+
+hello;
+
+if [[ $ans = "-a" ]] #
+    then
+    pwd
+elif [[ $ans = "-b" ]]
+    then
+    echo "$USER";
+fi
