@@ -23,5 +23,5 @@ elif [[ $ans = "-c" ]]
     date +'%m/%d/%Y'
 elif [[ $ans = "-d" ]]
     then
-    
+    users
 fi
