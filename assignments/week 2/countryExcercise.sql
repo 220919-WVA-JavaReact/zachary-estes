@@ -1,3 +1,4 @@
+--creating a table to store our desired data
 CREATE TABLE country(
 	countryName varchar(20),
 	population int,
@@ -5,7 +6,7 @@ CREATE TABLE country(
 	continent varchar(20),
 	worldCupGroup varchar(20)
 )
-
+--inserting data into the table 
 INSERT INTO country VALUES ('United States', 329500000, 'USA', 'North America', 'Group B');
 
 INSERT INTO country VALUES ('France', 67390000, 'FRA', 'Europe', 'Group D');
