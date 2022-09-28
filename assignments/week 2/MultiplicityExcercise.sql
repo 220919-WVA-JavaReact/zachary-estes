@@ -22,8 +22,7 @@ CREATE TABLE teachers (
 CREATE TABLE courses (
 	course_id serial PRIMARY KEY UNIQUE,
 	course_name varchar(25),
-	teacher_id int REFERENCES teachers,
-	department varchar(25) REFERENCES topics
+	teacher_id int REFERENCES teachers
 );
 
 CREATE TABLE students (
@@ -40,6 +39,12 @@ CREATE TABLE course_roster (
 	student_id int REFERENCES students
 );
 
+--junction table between course and department
+CREATE TABLE course_topic (
+	course_id int REFERENCES courses,
+	department varchar(25) REFERENCES topics
+);
+
 
 INSERT INTO teachers ("first", "last name", "department", "email", "phonenumber")
 VALUES 
@@ -47,11 +52,11 @@ VALUES
 	('Jack', 'Joseph', 'Foreign Languages', 'jackjoseph@gmail.com', '(812)721-9075'),
 	('Nancy', 'Wheeler', 'English', 'nancywheeler@gmail.com', '(812)007-3478');
 
-INSERT INTO courses ("course_name", "teacher_id", "department")
+INSERT INTO courses ("course_name", "teacher_id")
 VALUES 
-	('Trigonometry', 4, 'Math'),
-	('Introduction to French', 5, 'Foreign Languages'),
-	('Advanced Journalism', 6, 'English');
+	('Trigonometry', 1),
+	('Introduction to French', 2),
+	('Advanced Journalism', 3);
 
 INSERT INTO students ("first", "last", "phone_number", "email")	
 VALUES 
@@ -72,4 +77,11 @@ VALUES
 	(1, 3),
 	(3, 5),
 	(2, 4);
+
+INSERT INTO course_topic
+VALUES
+	(1, 'Math'),
+	(2, 'Foreign Languages'),
+	(3, 'English');
+	
 	
