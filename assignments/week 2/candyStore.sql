@@ -62,10 +62,12 @@ VALUES
 	(4002,	'Milton Hershey', 1001),
 	(4003,	'Franklin Mars', 9007),
 	(4004,	'John Cadbury',	NULL);
+
 --#12
 SELECT e."name", i."name" 
 FROM employees e
 JOIN inventory i ON e."favorite_candy" = i.id;  
+
 --#13
 SELECT e."name", i."name" 
 FROM employees e
