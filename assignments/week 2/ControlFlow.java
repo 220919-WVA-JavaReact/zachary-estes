@@ -69,11 +69,14 @@ public static int sum(int[] intArr){
 public static String echo(String word, int times){
 
     // logic
-   // int i;
-//     for (i = 0; i <= times; i++){
-  //      System.out.println(word);
- //   }
-    return "";
+    int i;
+
+    String z = " ";
+
+     for (i = 0; i < times; i++){
+        z += word ;
+    }
+    return z;
 }
 
 /*
