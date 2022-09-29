@@ -57,8 +57,8 @@ public static int sum(int[] intArr){
     int x = 0;
     int i;
 
-   for (i = 0; i <= intArr.length + 2; i++){
-        x = intArr[i] + intArr[i + 1];
+   for (i = 0; i <= intArr.length - 1; i++){
+        x += intArr[i];
     }
       return x;
 }
@@ -69,10 +69,11 @@ public static int sum(int[] intArr){
 public static String echo(String word, int times){
 
     // logic
-    int i;
-     for (i = 0; i <= times; i++){
-        System.out.println(word);
-    }
+   // int i;
+//     for (i = 0; i <= times; i++){
+  //      System.out.println(word);
+ //   }
+    return "";
 }
 
 /*
