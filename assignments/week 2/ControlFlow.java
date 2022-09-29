@@ -74,7 +74,7 @@ public static String echo(String word, int times){
     String z = " ";
 
      for (i = 0; i < times; i++){
-        z += word ;
+        z += word+ " ";
     }
     return z;
 }
@@ -85,7 +85,7 @@ This method should return true if the number of character in the string even, or
 public static boolean isEven(String s){
     
     // logic
-
+    
     return false;
 }
 
