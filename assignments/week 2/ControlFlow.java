@@ -74,7 +74,7 @@ public static String echo(String word, int times){
     String z = " ";
 
      for (i = 0; i < times; i++){
-        z += word+ " ";
+        z += word + " ";
     }
     return z;
 }
@@ -85,8 +85,11 @@ This method should return true if the number of character in the string even, or
 public static boolean isEven(String s){
     
     // logic
-    
+    if ( s.length() % 2 == 0 ){
+        return true;
+    }else{
     return false;
+    }
 }
 
 /*
@@ -95,8 +98,19 @@ This method should return an array of integer where all of the elements have bee
 public static int[] transformIntArr(int[] intArr){
     
     // logic
+    int[] y = intArr;
+    int i;
+    int m = 0;
 
-    return new int[5];
+     for (i = 0; i <= intArr.length - 1; i++){
+        int tracker = intArr[i];
+        if ( intArr[i] % 3 == 0){
+            m = intArr[i] * 2;
+            y[i] = m;
+        }
+     }
+
+    return y;
 }
 
 /*
