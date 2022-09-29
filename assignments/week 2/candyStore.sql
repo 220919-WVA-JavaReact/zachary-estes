@@ -72,3 +72,12 @@ JOIN inventory i ON e."favorite_candy" = i.id;
 SELECT e."name", i."name" 
 FROM employees e
 RIGHT JOIN inventory i ON e."favorite_candy" = i.id;
+
+--#14
+SELECT i.price * i.quantity
+FROM inventory i 
+WHERE id = 9007
+
+--#15
+SELECT min(price)
+FROM inventory 
