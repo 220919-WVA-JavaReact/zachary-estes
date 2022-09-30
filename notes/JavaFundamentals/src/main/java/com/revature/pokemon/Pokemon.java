@@ -17,6 +17,9 @@ public class Pokemon {
 
     int attack;
 
+    //we're adding on this field
+    boolean fainted;
+
     // Now that we have a pokemon we might want to find some way to construct our pokemon object
 
     public Pokemon (String name){
@@ -29,17 +32,19 @@ public class Pokemon {
         this.health = random.nextInt(100) + 1;
 
         this.attack = random.nextInt(100) + 1;
+
+        this.fainted = false;
     }
 
     /*
     We now have a way to create a pokemon object but what about attacking and stuff
 
-    we need yo create a method so these pokemon can battle
+    we need to create a method so these pokemon can battle
 
-    we can also creat an attempt catch method
+    we can also create an attempt catch method
      */
 
-    //Lets start our method fopr battling pokemon
+    //Lets start our method for battling pokemon
 
     public Pokemon battle(Pokemon opponent){
         //How do we battle?
@@ -47,10 +52,27 @@ public class Pokemon {
         //When my pokemon attacks another pokemon, my attack should reduce their health and their attacl should
         // reduce my pokemon's health
 
-        opponent.health -= this.attack;
+       // opponent.health -= this.attack;
 
-        this.health -= opponent.attack;
+       // this.health -= opponent.attack;
 
+       // return opponent;
+        // if we attack opponent
+        if (opponent.health - this.attack <= 0){
+            opponent.health = 0;
+
+            opponent.fainted = true;
+        } else {
+            opponent.health -= this.attack;
+        }
+        //if opponent attack us
+        if (this.health - opponent.attack <= 0){
+            this.health = 0;
+
+            this.fainted = true;
+        } else {
+            this.health -= opponent.attack;
+        }
         return opponent;
     }
 }
