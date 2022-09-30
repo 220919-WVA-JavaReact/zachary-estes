@@ -54,11 +54,12 @@ public static void main(String[] args){
 public static int sum(int[] intArr){
 
     // logic
+    int[] y1 = intArr.clone();
     int x = 0;
     int i;
 
-   for (i = 0; i <= intArr.length - 1; i++){
-        x += intArr[i];
+   for (i = 0; i <= y1.length - 1; i++){
+        x += y1[i];
     }
       return x;
 }
@@ -98,14 +99,13 @@ This method should return an array of integer where all of the elements have bee
 public static int[] transformIntArr(int[] intArr){
     
     // logic
-    int[] y = intArr;
+    int[] y = intArr.clone();
     int i;
     int m = 0;
 
-     for (i = 0; i <= intArr.length - 1; i++){
-        int tracker = intArr[i];
-        if ( intArr[i] % 3 == 0){
-            m = intArr[i] * 2;
+     for (i = 0; i <= y.length - 1; i++){
+        if ( y[i] % 3 == 0){
+            m = y[i] * 2;
             y[i] = m;
         }
      }
@@ -119,7 +119,21 @@ This method should return the same array of integer ordered from least to most.
 public static int[] orderArr(int[] intArr){
     
     // logic
+    int i;
+    int j;
+    int[] q = intArr.clone();
+    
+// {1, 3, 5, 6};
 
-    return new int[5];
+    for ( i = 0; i < q.length; i++ ){
+        for ( j = i+1; j < q.length; j++ ){
+            if (( q[i] > q[j] ) && ( i != j )){
+                int w = q[j];
+                q[j] = q[i];
+                q[i] = w;
+             } 
+         }
+    }
+    return q;
 }
 }
