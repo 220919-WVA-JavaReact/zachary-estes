@@ -1,4 +1,4 @@
-package com.revature.excercises;
+package com.revature.exercises;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;

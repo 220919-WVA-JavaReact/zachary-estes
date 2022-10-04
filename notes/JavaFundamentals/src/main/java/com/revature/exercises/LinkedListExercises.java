@@ -1,6 +1,4 @@
-package com.revature.excercises;
-
-import org.w3c.dom.Node;
+package com.revature.exercises;
 
 import java.util.Arrays;
 import java.util.Iterator;
@@ -38,34 +36,28 @@ public class LinkedListExercises {
             System.out.println(it3.next());
         }
         // 4.  Write a Java program to insert the specified element at the front of a linked list
-//        Scanner sc = new Scanner(System.in);
-//        System.out.println("enter an element");
-//        String x1 = sc.nextLine();
-//        list3.addFirst(x1);
-//        System.out.println(list3);
-        // 5. Write a Java program to insert some elements at the specified position into a linked list.
-
-        String[] k = list3.toArray(new String[0]);
-        String t = "";
-        t = k[0];
         Scanner sc = new Scanner(System.in);
         System.out.println("enter an element");
-        String x2 = sc.nextLine();
-        System.out.println("enter an position");
-        int x3 = sc.nextInt();
+        String x1 = sc.nextLine();
+        list3.addFirst(x1);
+        System.out.println(list3);
+        // 5. Write a Java program to insert some elements at the specified position into a linked list.
 
-        for ( int i = 1; i < x3 - 1; i++){
-            if( t != null){
-                list3.addFirst(x2);
-            }
-        }
 
         // 6. Write a Java program to get the first and last occurrence of the specified elements in a linked list.
+        System.out.println(list3.getFirst());
+        System.out.println(list3.getLast());
 
         // 7. Write a Java program to check if a particular element exists in a linked list.
-
+        System.out.println("enter an element");
+        String x2 = sc.nextLine();
+        for (String arr1 : list3 ){
+            if (arr1.contains(x2)){
+                System.out.println("You found: " + x2);
+            }
+        }
         // 8. Write a Java program to convert a linked list to array list.
-
-
+        Object[] arr = list3.toArray();
+        System.out.println(Arrays.toString(arr));
     }
 }
