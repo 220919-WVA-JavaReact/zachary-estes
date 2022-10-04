@@ -1,6 +1,5 @@
 package com.revature.calculator;
 
-import com.revature.pokemon.Pokemon;
 
 import java.util.Scanner;
 
@@ -17,7 +16,7 @@ public class Calculator {
                     + "- Addition '+' " + "\n"
                     + "- Subtraction '-' " + "\n"
                     + "- Division '/' " + "\n"
-                    + "- Multiplication '*' " + "\n"
+                    + "- Multiplication '*' "
             );
 
             String choice1 = input.nextLine();
