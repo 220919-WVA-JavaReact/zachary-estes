@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <form action="POST" action="http://example.com">
+        <fieldset>
+
+            <label for="username">Username</label>
+            <input type="text" name="username" maxlength="50"/>
+            <br/><br/>
+            <label for="password">Password:</label>
+            <input type="password" name="password" maxlength="50" placeholder="Enter your password here"/>
+        </fieldset>
+
+        <br/>
+
+        <fieldset>
+            <legend>Your Review </legend>
+
+                <div>
+                    <label for="hear-about">How did you hear about us?</label>
+                    <select name="refer" id="hear-about" >
+                        <option value="">Please make a selection</option>
+                        <option value="google">Google</option>
+                        <option value="advert">Advertisement</option>
+                        <option value="friend">Friend</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div>
+                    <p>Would you visit again?</p>
+                    <br/>
+                    <label for="">Yes: <input type="radio" id="will-return" value="yes"></label>
+                    <label for="">No: <input type="radio" id="will-return" value="no"></label>
+                    <label for="">Maybe: <input type="radio" id="will-return" value="maybe"></label>
+                </div>
+                
+                <label for="">
+                    Sign up for email updates <input type="checkbox" checked="checked" name="subscribes">
+                </label>
+
+                <br/><br/>
+
+                <label >
+                    Please provide any additional comments: <br/>
+                    <textarea name="comments" id="comments" cols="30" rows="10"></textarea>
+                </label>
+
+
+
+
+
+        </fieldset>
+    </form>
+</body>
+</html>

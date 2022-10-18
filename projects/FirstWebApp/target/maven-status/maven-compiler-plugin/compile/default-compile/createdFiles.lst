@@ -1,0 +1,4 @@
+com\revature\servlets\UserServlet.class
+com\revature\Main.class
+com\revature\servlets\SanityServlet.class
+com\revature\models\AppUser.class
